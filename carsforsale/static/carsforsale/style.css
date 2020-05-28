@@ -1,0 +1,13 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background: darkcyan
+}
+h1{
+    background-color: peru;
+    color: rgb(0, 54, 218);
+    text-align: center;
+}

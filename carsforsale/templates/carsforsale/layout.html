@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'carsforsale/style.css' %}" type='text/css'>
     <title>Available cars</title>
 </head>
-<body style="background-color:  #4b6777;">
+<body>
     <header class="container-lg center-align green lighten-3">
         <h1 style="font-size: 1000%;">GUMTREE FOR CARS</h1>
     </header>
+    
     <div class="container">
         {% block content %}
 
