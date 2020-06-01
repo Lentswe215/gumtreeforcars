@@ -1,5 +1,50 @@
 {% extends 'carsforsale/layout.html' %}
 
 {% block content %}
-<h4 class="center-align red lighten-3" style="font-size: 500%; background-size: cover;">{{ title }}</h4>
+<h3 class="center-align green lighten-3" style="font-size: 500%; background-size: cover;">{{ car.title }}</h4>
+<div class="myfield">
+    <p> <b>Created:</b> {{car.time_and_date }}</p>
+   <img src="{{ car.car_picture.url }}" width="500px">
+   
+   <p class="price">{{ car.price}}</p>
+    <p><b>Year:</b><br>{{ car.manufactured }}</p>
+    <p class="grey"><b>Mileage(km):</b><br>{{car.mileage}}</p>
+   <p><b>Transmission:</b> <br>{{ car.transmission }}</p>
+   
+   <p class="grey"><b>Fuel type:</b><br>{{ car.fuel_type }}</p>
+   
+   <p><b>Color: </b><br>{{ car.color }}</p>
+   
+   <p class="grey"><b>Description: </b><br>{{ car.car_description }}</p>
+   <p>{{ car.city }}, {{car.province}}</p>
+
+   <p class="grey"><b>Phone: </b><br>{{ car.phone}}</p>
+
+   <p><b>Email: </b><br>{{ car.email }}</p>
+</div>
+    <style>
+    .myfield{
+        background-color: navajowhite;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .grey{
+        background-color: orange;
+
+    }
+    p {
+        color: rgb(33, 46, 45);
+        font-size: 20px;
+    }
+    hr {
+        color: navy;
+    }
+
+    .price {
+        color: red;
+        font-size: 100px;
+    }
+    
+    </style>
 {% endblock %}

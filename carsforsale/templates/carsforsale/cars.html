@@ -1,9 +1,45 @@
 {% extends 'carsforsale/layout.html' %}
 
 {% block content %}
-<h4 class="center-align red lighten-3" style="font-size: 500%; background-size: cover;">Available Cars</h4>
+<h3 class="center-align red lighten-3" style="font-size: 500%; background-size: cover;">Available Cars</h4>
+<ul class="myfield">
+    {% for car in cars %}
+    <li class="item">
+        <a href="/car_information/{{car.id}}">  
+            <h4 class="cartitle">{{ car.title }}</h4>
+           <img src="{{car.car_picture.url}}" width="500px">
+            <p class="price">{{car.price }}</p>
+        </a>
+    </li>
+    {% endfor%}
+    
+</ul>
+<style>
+    .myfield{
+        background-color: navajowhite;
+        padding: 20px;
+        text-align: center;
+    }
+    .item{
+        border: black solid;
+    }
+    .item:hover {
+        opacity: .5
+    }
+    
+    li {
+        margin: 10px;
+        padding: 10px;
+    }
+    p {
+        color: rgb(33, 46, 45);
+        font-size: 20px;
+    }
 
-<img src="{{ }}" width="250px">
-
-</a>
+    .price {
+        color: red;
+        font-size: 150px;
+    }
+    
+    </style>
 {% endblock %}

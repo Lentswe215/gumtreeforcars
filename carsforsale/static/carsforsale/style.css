@@ -4,10 +4,28 @@
     box-sizing: border-box;
 }
 body{
-    background: darkcyan
+    background: rgb(105, 134, 134)
 }
 h1{
-    background-color: peru;
-    color: rgb(0, 54, 218);
+    background-color: rgb(251, 128, 5);
+    color: rgb(0, 13, 49);
     text-align: center;
 }
+
+.myfield{
+    background-color: silver;
+}
+li {
+    margin: 10px;
+    padding: 10px;
+}
+p {
+    color: rgb(33, 46, 45);
+    font-size: 20px;
+}
+
+.price {
+    color: red;
+    font-size: 150px;
+}
+
