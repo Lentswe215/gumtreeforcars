@@ -2,12 +2,12 @@
 
 {% block content %}
 <h3 class="center-align red lighten-3" style="font-size: 500%; background-size: cover;">Available Cars</h4>
-<ul class="myfield">
+<ul class="myfield col s12 m2">
     {% for car in cars %}
     <li class="item">
         <a href="/car_information/{{car.id}}">  
             <h4 class="cartitle">{{ car.title }}</h4>
-           <img src="{{car.car_picture.url}}" width="500px">
+           <img src="{{car.car_picture.url}}" width="500px"class="z-depth-2">
             <p class="price">{{car.price }}</p>
         </a>
     </li>
@@ -23,8 +23,9 @@
     .item{
         border: black solid;
     }
-    .item:hover {
-        opacity: .5
+    .item.a:hover {
+        opacity: .5;
+        background-color: orange;
     }
     
     li {
