@@ -1,0 +1,61 @@
+{% extends 'carsforsale/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-3" style="font-size: 500%; background-size: cover;">Register Cars</h4>
+
+<form class="myform" method="POST" action="/success/">
+    {% csrf_token %}
+   <div class="input-field col s12">
+       <label for="transmission">Transmission: </label>
+       <select id="transmission">
+        <option value="" disabled selected>Choose transmission</option>
+        <option value="automatic">Automatic</option>
+        <option value="Manual">Manual</option>
+       </select>
+    </div>
+    <div class="input-field col s12">
+        <label class="fuel">Fuel type: </label>
+        <select>
+         <option value="" disabled selected>Choose fuel type</option>
+         <option value="automatic">Deisel</option>
+         <option value="Manual">Petrol</option>
+        </select>
+    </div>
+</form>
+
+<style>
+    label {
+        font-size: x-large;
+        color: rgb(12, 120, 228);
+        margin-right: 30px;
+    }
+    form {
+        border: rgb(41, 0, 0) solid;
+        padding: 2% 20px 2% 30px;
+        margin: 1% 0 0 0;
+        background-color: rgb(97, 6, 6);
+        /* font-size: x-large bold; */
+    }
+    #picture {
+        background-color: cornsilk;
+    }
+
+    select {
+        padding: 0.5em 1em;
+      
+    }
+    .fuel {
+        margin-right: 70px;
+    }
+    
+    .submitbtn {
+        color: darkgoldenrod;
+        width: 20%;
+        height: 50px;
+        margin-left: 50px;
+    }
+    
+</style>
+
+{% endblock%}
+

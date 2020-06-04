@@ -1,12 +1,13 @@
 {% extends 'carsforsale/layout.html' %}
 
 {% block content %}
-<h3 class="center-align red lighten-3" style="font-size: 500%; background-size: cover;">Available Cars</h4>
-<ul class="myfield col s12 m2">
+<h3 class="cars_heading">Available Cars</h4>
+<ul class="myfield">
     {% for car in cars %}
     <li class="item">
         <a href="/car_information/{{car.id}}">  
             <h4 class="cartitle">{{ car.title }}</h4>
+            <p class="datetime">{{ car.date }}</p>
            <img src="{{car.car_picture.url}}" width="500px"class="z-depth-2">
             <p class="price">{{car.price }}</p>
         </a>
@@ -15,32 +16,28 @@
     
 </ul>
 <style>
-    .myfield{
-        background-color: navajowhite;
-        padding: 20px;
-        text-align: center;
-    }
-    .item{
-        border: black solid;
-    }
-    .item.a:hover {
-        opacity: .5;
-        background-color: orange;
-    }
-    
-    li {
-        margin: 10px;
-        padding: 10px;
-    }
-    p {
-        color: rgb(33, 46, 45);
-        font-size: 20px;
-    }
-
-    .price {
-        color: red;
-        font-size: 150px;
-    }
-    
-    </style>
+     li{
+     list-style: none;
+     /* margin: 2% 20% 2% 20%; */
+ }
+ .cartitle {
+     font-size: xx-large;
+     margin-bottom: 1%;
+ }
+ .datetime {
+     color: rgb(19, 5, 0);
+     text-decoration-color: red;
+ }
+ h3 {
+    background-color: tomato;
+    text-align: center;
+    font-size: 500%;
+    background-size: cover;
+    margin: 2%;
+ }
+ ul {
+    /* margin: 2% 20% 20% 2%; */
+    margin: 2%;
+ }
+</style>
 {% endblock %}

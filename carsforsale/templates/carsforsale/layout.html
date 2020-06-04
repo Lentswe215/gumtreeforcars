@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'carsforsale/style.css' %}" type='text/css'>
     <title>Available cars</title>
 </head>
 <body>
-    <header class="container-lg center-align">
-        <h1 style="font-size: 1000%;">GUMTREE FOR CARS</h1>
+   
+    
+    <header>
+        <a href="/"><h1 style="font-size: 1000%;">GUMTREE FOR CARS</h1></a>
     </header>
     
      <div class="container">
-        {% block content %}
+         <div class="inner">
+            {% block content %}
 
-        {% endblock %}
+            {% endblock %}
+         </div>
     </div>
- <a href="/admin" class="toAdmin">Go to admin</a>
+ <a href="/admin" class="toAdmin center red darken-5 inline">Go to admin</a>
+ <style>
+     a {
+         text-decoration: none;
+     }
+     a:hover {
+         opacity: .5;
+         text-decoration: wavy;
+     }
+     .container {
+      width:100vw;
+     }
+     .inner {
+         width: 70%;
+         margin-left: 15em;
+     }
+ </style>
 </body>
 </html>

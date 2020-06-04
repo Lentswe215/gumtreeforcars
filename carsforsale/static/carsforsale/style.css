@@ -6,6 +6,9 @@
 body{
     background: rgb(105, 134, 134)
 }
+.container {
+    width: 100vw;
+}
 h1{
     background-color: rgb(251, 128, 5);
     color: rgb(0, 13, 49);
@@ -17,28 +20,44 @@ h1{
     padding: 20px;
     text-align: center;
 }
-p {
-    color: rgb(33, 46, 45);
-    font-size: 20px;
-    margin:0.5%;
+.item{
+    border: black solid;
 }
-hr {
-    color: navy;
-}
-
-.price {
-    color: red;
-    font-size: 100px;
+a:hover {
+    opacity: .5;
+    background-color: orange;
 }
 
 li {
     margin: 10px;
     padding: 10px;
 }
+p {
+    color: rgb(33, 46, 45);
+    font-size: 20px;
+}
+
+.price {
+    color: red;
+    font-size: 150px;
+}
+
+img:active {
+    position: relative;
+    width: 70%;
+    height: 70%;
+ }
+ .datetime{
+     text-align: left;
+ }
+ li{
+     list-style: none;
+ }
 
 .toAdmin {
     color: antiquewhite;
     font-weight: 500;
     font-size: 20px;
+    left: 30%;
 }
 

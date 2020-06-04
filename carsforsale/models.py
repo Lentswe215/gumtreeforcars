@@ -24,14 +24,14 @@ class Carsforsale(models.Model):
 
     )
     title = models.CharField(default="", max_length= 100)
-    time_and_date = models.DateTimeField(default= datetime.now, blank=True)
+    date = models.DateField(default= datetime.now, blank=True)
     car_picture = models.ImageField(upload_to='cars_pictures', blank=True)
     price = models.CharField(default=0, max_length= 10) 
     make = models.CharField(max_length= 50, default="")
     model = models.CharField(max_length= 50, default="")
     manufactured = models.CharField(max_length=4, default="")
     mileage = models.CharField(max_length= 10, default=0)
-    transmission = models.CharField(default="Select", max_length=20, choices= transmission_choices)
+    transmission = models.CharField(default="", max_length=20, choices= transmission_choices)
     fuel_type = models.CharField(default="", max_length= 10, choices=fuel_choices)
     color =  models.CharField(default="", max_length= 50)
     car_description = models.TextField()
@@ -44,3 +44,9 @@ class Carsforsale(models.Model):
 
     class Meta:
         verbose_name_plural = "Carsforsale"
+
+    class Meta:
+        unique_together = ('id', 'title')
+
+
+

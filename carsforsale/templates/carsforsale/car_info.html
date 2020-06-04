@@ -1,9 +1,9 @@
 {% extends 'carsforsale/layout.html' %}
 
 {% block content %}
-<h3 class="center-align green lighten-3" style="font-size: 500%; background-size: cover;">{{ car.title }}</h4>
+<h3 class="car_info_heading">{{ car.title }}</h4>
 <div class="myfield col s12 m2">
-    <p class="posted"> <b>Posted:</b> {{car.time_and_date }}</p><br>
+    <p class="datetime"> <b>Posted:</b> {{car.date }}</p><br>
    <img src="{{ car.car_picture.url }}" width="500px" class="z-depth-5">
    
    <p class="price z-depth-4">{{ car.price}}</p>
@@ -16,30 +16,13 @@
    <p class="grey z-depth-1"><b>Area:</b><br>{{ car.city }}, {{car.province}}</p>
    <p class="z-depth-4"><b>Phone: </b><br>{{ car.phone}}</p>
    <p class="grey z-depth-1"><b>Email: </b><br>{{ car.email }}</p>
-</div>
-    <style>
-    .myfield{
-    background-color: navajowhite;
-    padding: 20px;
-    text-align: center;
-}
-p {
-    color: rgb(33, 46, 45);
-    font-size: 20px;
-    margin:0.5%;
-}
 
-img:active {
-   position: relative;
-   width: 70%;
-   height: 70%;
-}
-.posted{
-    text-align: left;
-}
-.price {
-    color: red;
-    font-size: 100px;
-}
-    </style>
+   <style>
+       .car_info_heading {
+        background-color: rgb(255, 0, 0);
+        font-size: 300%;
+        text-align: center;
+        background-size: cover;
+       }
+   </style>
 {% endblock %}
