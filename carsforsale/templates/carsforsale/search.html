@@ -1,7 +1,16 @@
 {% extends 'carsforsale/layout.html' %}
 
 {% block content %}
-<h3 class="cars_heading">Available Cars</h4>
+
+{% if messages%}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</div>
+{% if cars%}
 <ul class="myfield">
     {% for car in cars %}
     <li class="item">
@@ -12,10 +21,8 @@
         </a>
         <p class="price">{{car.price }}</p>
     </li>
-    {% endfor%}
-    
+    {% endfor %}
 </ul>
-<style>
-   
-</style>
+</a>
+{% endif %}
 {% endblock %}

@@ -45,8 +45,6 @@ class Carsforsale(models.Model):
     class Meta:
         verbose_name_plural = "Carsforsale"
 
-    class Meta:
-        unique_together = ('id', 'title')
 
 
 

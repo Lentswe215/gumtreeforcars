@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from django.contrib import messages
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Carsforsale
 
 
 # Create your views here.
 def cars(request):
-    carsAvailable = Carsforsale.objects.order_by('date')[:20]
+    carsAvailable = Carsforsale.objects.order_by('-date')[:20]
 
     return render(request, "carsforsale/cars.html",{
         "cars" : carsAvailable
@@ -18,11 +20,42 @@ def carInfo(request, id):
         "car": currentCar
     })
     
-def example(request):
-    visitorinfo = Visitor.objects.all()
-    return render(request, "carsforsale/admin_page.html", {
-        "visitors" : visitorinfo
-    })
+def search(request):
+    if request.method == 'POST':
+        search_box = request.POST['searchbox']
+
+        if search_box:
+            match = Carsforsale.objects.filter(
+                Q(make__icontains=search_box) |
+                Q(model__icontains=search_box) |
+                Q(transmission__icontains=search_box) |
+                Q(color__icontains=search_box) |
+                Q(city__icontains=search_box) |
+                Q(province__icontains=search_box) |
+                Q(fuel_type__icontains=search_box)
+            )
+            if match:
+               return render(request, 'carsforsale/search.html', {'cars': match })
+            else:
+                messages.error(request, "Match not found")
+                
+        else:
+            return HttpResponseRedirect('/search')
+
+# def get_carsforsale_queryset(query=None):
+#     querySet = []
+#     queries = query.split(" ")
+#     for q in queries:
+#         carsAvailable = Carsforsale.objects.filter(
+#             Q(make__icontains=search_box) |
+#             Q(model__icontains=search_box) |
+#             Q(transmission__icontains=search_box) |
+#             Q(color__icontains=search_box) |
+#             Q(mo__icontains=search_box) |
+#             Q(fuel_type__icontains=search_box)
+#         ).distinct()
+
+
 
 def success(request):
     fullname = request.POST["fullname"]

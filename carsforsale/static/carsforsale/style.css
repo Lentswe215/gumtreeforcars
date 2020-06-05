@@ -4,30 +4,94 @@
     box-sizing: border-box;
 }
 body{
-    background: rgb(105, 134, 134)
+    background: #f4f4f4
 }
 .container {
     width: 100vw;
 }
 h1{
-    background-color: rgb(251, 128, 5);
-    color: rgb(0, 13, 49);
+    background-color: #f7f7f7;
+    color: #06623b;
     text-align: center;
+    font-size: 1000%;
+}
+.myfield a:hover {
+    opacity: .5;
+    text-decoration-color: red;
+    text-decoration: underline;
+}
+.container {
+ width:67vw;
+ margin: auto;
+}
+.inner {
+    width: 100%;
+    /* margin-left: 15em; */
 }
 
+
+.row {
+    background-color: #dae1e7;
+    width:100%;
+    padding: 0.4em 31em;
+    margin-top: 7px;
+    /* margin-left: 20em; */
+}
+
+.form-control {
+    height: 40px;
+    width: 400px;
+    font-size: x-large;
+    text-align: center;
+    color: black;
+
+}
+.searchbtn {
+    background-color: rgb(124, 185, 24);
+    width: 170px;
+    height: 40px;
+    font-size: larger;
+    font-weight: 500;
+    margin-left: 23px;
+
+}
 .myfield{
-    background-color: navajowhite;
+    background-color: #ececec;
     padding: 20px;
     text-align: center;
 }
 .item{
     border: black solid;
+    height: 50%
 }
 a:hover {
     opacity: .5;
     background-color: orange;
 }
-
+li{
+    list-style: none;
+    /* margin: 2% 20% 2% 20%; */
+}
+.cartitle {
+    font-size: xx-large;
+    margin-bottom: 1%;
+}
+.datetime {
+    color: #035aa6;
+    font-size: larger;
+}
+h3 {
+   background-color: #95389e;
+   text-align: center;
+   font-size: 500%;
+   background-size: cover;
+   margin: 7px;
+   text-transform: uppercase;
+}
+ul {
+   /* margin: 2% 20% 20% 2%; */
+   margin: 2%;
+}
 li {
     margin: 10px;
     padding: 10px;
@@ -42,17 +106,23 @@ p {
     font-size: 150px;
 }
 
+.car_info_heading {
+    background-color: #035aa6;
+    color: cornsilk;
+}
 img:active {
     position: relative;
     width: 70%;
     height: 70%;
  }
- .datetime{
+ /* .datetime{
      text-align: left;
- }
- li{
-     list-style: none;
- }
+ } */
+
+.grey {
+    background-color: grey;
+    color: ivory;
+}
 
 .toAdmin {
     color: antiquewhite;
