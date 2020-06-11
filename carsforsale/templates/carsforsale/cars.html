@@ -4,14 +4,15 @@
 <h3 class="cars_heading">Available Cars</h4>
 <ul class="myfield">
     {% for car in cars %}
+    <a href="/car_information/{{car.id}}">  
     <li class="item">
-        <a href="/car_information/{{car.id}}">  
             <h4 class="cartitle">{{ car.title }}</h4>
             <p class="datetime">{{ car.date }}</p>
            <img src="{{car.car_picture.url}}" width="500px"class="z-depth-2">
-        </a>
-        <p class="price">{{car.price }}</p>
+           <p class="price">{{car.price }}</p>    
     </li>
+</a>
+
     {% endfor%}
     
 </ul>

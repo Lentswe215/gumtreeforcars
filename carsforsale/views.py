@@ -38,9 +38,9 @@ def search(request):
                return render(request, 'carsforsale/search.html', {'cars': match })
             else:
                 messages.error(request, "Match not found")
-                
-        else:
-            return HttpResponseRedirect('/search')
+                return render(request, 'carsforsale/search.html', {'cars': match })
+
+            
 
 # def get_carsforsale_queryset(query=None):
 #     querySet = []
@@ -57,17 +57,17 @@ def search(request):
 
 
 
-def success(request):
-    fullname = request.POST["fullname"]
-    age = request.POST["age"]
-    date_of_visit = request.POST["date_of_visit"]
-    time_of_visit = request.POST["time_of_visit"]
-    assisted_by = request.POST["assisted_by"]
-    comments = request.POST["comments"]
+# def success(request):
+#     fullname = request.POST["fullname"]
+#     age = request.POST["age"]
+#     date_of_visit = request.POST["date_of_visit"]
+#     time_of_visit = request.POST["time_of_visit"]
+#     assisted_by = request.POST["assisted_by"]
+#     comments = request.POST["comments"]
 
-    visitor = Visitor(fullname= fullname, age=age, date_of_visit=date_of_visit, time_of_visit=time_of_visit, assisted_by=assisted_by, comments=comments)
-    visitor.save()
+#     visitor = Visitor(fullname= fullname, age=age, date_of_visit=date_of_visit, time_of_visit=time_of_visit, assisted_by=assisted_by, comments=comments)
+#     visitor.save()
 
-    return HttpResponseRedirect('/example')
+#     return HttpResponseRedirect('/example')
     
     

@@ -26,34 +26,32 @@ h1{
 }
 .inner {
     width: 100%;
-    /* margin-left: 15em; */
 }
-
 
 .row {
     background-color: #dae1e7;
     width:100%;
     padding: 0.4em 31em;
     margin-top: 7px;
-    /* margin-left: 20em; */
+    vertical-align: middle;
 }
 
 .form-control {
-    height: 40px;
+    height: 46px;
     width: 400px;
-    font-size: x-large;
-    text-align: center;
-    color: black;
-
+    font-size: 20px;
+    padding-left: 12px;
 }
 .searchbtn {
-    background-color: rgb(124, 185, 24);
+    background-color: rgb(66, 104, 2);
     width: 170px;
     height: 40px;
     font-size: larger;
     font-weight: 500;
+    margin-top: 5px;
     margin-left: 23px;
-
+    margin-bottom: 5px;
+    color: aliceblue;
 }
 .myfield{
     background-color: #ececec;
@@ -64,13 +62,15 @@ h1{
     border: black solid;
     height: 50%
 }
+a {
+    text-decoration: none;
+}
 a:hover {
     opacity: .5;
     background-color: orange;
 }
 li{
     list-style: none;
-    /* margin: 2% 20% 2% 20%; */
 }
 .cartitle {
     font-size: xx-large;
@@ -104,6 +104,7 @@ p {
 .price {
     color: red;
     font-size: 150px;
+    text-decoration: none;
 }
 
 .car_info_heading {
