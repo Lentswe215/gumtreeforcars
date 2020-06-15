@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     {% load static %}
     <link rel="stylesheet" href="{% static 'carsforsale/style.css' %}" type='text/css'>
-    <title>Available cars</title>
+    {% block pagetitle %}
+
+    {% endblock %}
 </head>
 <body>
    
@@ -12,7 +14,8 @@
     <header>
         <a href="/"><h1>GUMTREE FOR CARS</h1></a>
     </header>
-    <form action="/search/" method="post">
+    
+    <form action="/search/" class="search" method="post">
     {% csrf_token %}
     <div class="row">
         <div class="col">

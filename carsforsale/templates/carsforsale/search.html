@@ -1,4 +1,7 @@
 {% extends 'carsforsale/layout.html' %}
+{% block pagetitle %}
+<title>search</title>
+{% endblock %}
 
 {% block content %}
 
@@ -13,17 +16,18 @@
 {% if cars%}
 <ul class="myfield">
     {% for car in cars %}
-    <li class="item">
-        <a href="/car_information/{{car.id}}">  
+    <a href="/car_information/{{car.id}}">
+        <li class="item">
             <h4 class="cartitle">{{ car.title }}</h4>
             <p class="datetime">{{ car.date }}</p>
-           <img src="{{car.car_picture.url}}" width="500px"class="z-depth-2">
-        </a>
-        <p class="price">{{car.price }}</p>
-    </li>
-    {% endfor %}
+            <img src="{{car.car_picture.url}}" width="500px" class="z-depth-2">
+            <p class="price">{{car.price }}</p>
+        </li>
+    </a>
+
+    {% endfor%}
+
 </ul>
-</a>
 {% endif %}
 <style>
     .errormessage {

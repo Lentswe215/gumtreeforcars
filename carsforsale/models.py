@@ -23,27 +23,27 @@ class Carsforsale(models.Model):
         ('KwaZulu Natal', 'KwaZulu Natal'),
 
     )
-    title = models.CharField(default="", max_length= 100)
+    title = models.CharField(default='', max_length= 100)
     date = models.DateField(default= datetime.now, blank=True)
     car_picture = models.ImageField(upload_to='cars_pictures', blank=True)
     price = models.CharField(default=0, max_length= 10) 
-    make = models.CharField(max_length= 50, default="")
-    model = models.CharField(max_length= 50, default="")
-    manufactured = models.CharField(max_length=4, default="")
+    make = models.CharField(max_length= 50, default='')
+    model = models.CharField(max_length= 50, default='')
+    manufactured = models.CharField(max_length=4, default='')
     mileage = models.CharField(max_length= 10, default=0)
-    transmission = models.CharField(default="", max_length=20, choices= transmission_choices)
-    fuel_type = models.CharField(default="", max_length= 10, choices=fuel_choices)
-    color =  models.CharField(default="", max_length= 50)
+    transmission = models.CharField(default='', max_length=20, choices= transmission_choices)
+    fuel_type = models.CharField(default='', max_length= 10, choices=fuel_choices)
+    color =  models.CharField(default='', max_length= 50)
     car_description = models.TextField()
     city = models.CharField(max_length=50)
     province = models.CharField(max_length=50, choices= provinces)
     phone = models.CharField(max_length=10, default=0)
-    email = models.EmailField(default="example@gmail.com", max_length= 50)
+    email = models.EmailField(default='example@gmail.com', max_length= 50)
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name_plural = "Carsforsale"
+        verbose_name_plural = 'Carsforsale'
 
 
 
