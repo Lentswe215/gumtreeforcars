@@ -24,6 +24,11 @@ h1{
  width:67vw;
  margin: auto;
 }
+.cars_heading {
+    background-color: #053521;
+    color: #dae1e7;
+    font-size: 76px;
+}
 .inner {
     width: 100%;
 }
@@ -89,7 +94,6 @@ h3 {
    text-transform: uppercase;
 }
 ul {
-   /* margin: 2% 20% 20% 2%; */
    margin: 2%;
 }
 li {
@@ -98,7 +102,7 @@ li {
 }
 p {
     color: rgb(33, 46, 45);
-    font-size: 28px;
+    font-size: 28 px;
 }
 
 .price {
@@ -116,9 +120,6 @@ img:active {
     width: 70%;
     height: 70%;
  }
- /* .datetime{
-     text-align: left;
- } */
 
 .grey {
     background-color: grey;
