@@ -36,8 +36,9 @@ class CarCreateView(CreateView):
               'email'
               ]
 
-    def __str__(self):
-        return self.title
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class CarDetailView(DetailView):
